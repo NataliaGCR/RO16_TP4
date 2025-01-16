@@ -53,7 +53,7 @@ function ok=verif_stability(x_verif)
   %eigs(P);
 
   %ici on calcul la borne du probleme quadratique beta
-  [x1,obj]=qp([0;0],-2*P,[],[],[],[-0.8;-0.8],[0.8;0.8],-2,K,2)
+  [x1,obj]=qp([0.5;0.5],-2*P,[],[],[],[-0.8;-0.8],[0.8;0.8],-2,K,2)
   beta=-obj
 
   %TODO ecrire le test qui valide ou non si le point est dans la zone de stabilite du controleur
